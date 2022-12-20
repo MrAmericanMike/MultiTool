@@ -2,6 +2,7 @@ package com.mramericanmike.multitool;
 
 import com.mojang.logging.LogUtils;
 import com.mramericanmike.multitool.items.ModMultiTool;
+import com.mramericanmike.multitool.items.MultiToolMaterial;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -29,7 +30,8 @@ public class MultiTool
     public static final String MODID = "multitool";
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-	public static final RegistryObject<Item> PICK_ITEM = ITEMS.register("multitool_item", () -> new ModMultiTool(Tiers.DIAMOND, 1, -2.8F, new Item.Properties()));
+//	public static final RegistryObject<Item> PICK_ITEM = ITEMS.register("multitool_item", () -> new ModMultiTool(Tiers.WOOD, 1, -2.8F, new Item.Properties()));
+	public static final RegistryObject<Item> PICK_ITEM = ITEMS.register("multitool_item", () -> new PickaxeItem(MultiToolMaterial.IRON_MULTITOOL, 1, -2.8F, new Item.Properties()));
 
     public MultiTool()
     {
